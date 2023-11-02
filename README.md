@@ -76,7 +76,51 @@ public class KafkaConsumerConfig {
     }
 }
 ```
+You can convert these commands into a Markdown (MD) file by simply formatting them as code blocks within your document. Here's how you can present these commands in your README.md file:
 
+## Apache Kafka Commands
+
+### Start the ZooKeeper
+
+To start the ZooKeeper server, use the following command:
+
+```bash
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+```
+
+### Start the Kafka Server
+
+To start the Kafka server, execute the following command:
+
+```bash
+bin\windows\kafka-server-start.bat config\server.properties
+```
+
+### Create a Topic
+
+Create a Kafka topic using the following command. Replace `quickstart-events` with your desired topic name and adjust the `--bootstrap-server` parameter if needed:
+
+```bash
+bin\windows\kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+### Create a Producer Tool
+
+Use the Kafka console producer to produce messages to a topic. Replace `quickstart-events` with the desired topic name and adjust the `--bootstrap-server` parameter if needed:
+
+```bash
+bin\windows\kafka-console-producer.bat --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+### Create a Consumer Tool
+
+To consume messages from a Kafka topic, use the following command. Replace `quickstart-events` with the topic name and set `--from-beginning` if you want to start from the beginning of the topic:
+
+```bash
+bin\windows\kafka-console-consumer.bat --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+```
+
+Make sure you have Apache Kafka properly installed and configured before running these commands.
 
 ## Acknowledgments
 - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
