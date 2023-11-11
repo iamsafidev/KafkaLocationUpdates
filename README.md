@@ -18,7 +18,7 @@ Follow these steps to get your Kafka Spring Boot project up and running:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/kafka-java-spring-boot.git
+   git clone https://github.com/iamsafidev/KafkaLocationUpdates.git
    ```
 
 2. Open the project in your favourite Integrated Development Environment (IDE).
